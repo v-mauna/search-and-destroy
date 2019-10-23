@@ -2,9 +2,24 @@
 
 //Complete this algo
 const isLoop = (linkedlist) => {
+    if(linkedlist.head === null){
+        return false
+    }
+    let savedNodes = [];
+    let currentNode = linkedlist.head;
+    while(!(savedNodes.includes(currentNode.value)) && currentNode.next){
+        savedNodes.push(currentNode.value);
+        if(currentNode.next){
+            currentNode = currentNode.next;
+        }
+    }
 
-};
+        return savedNodes.includes(currentNode.value)
+    }
 
+const findLoop = (linkedList) => {
+    
+}
 
 /*
 EXTRA CREDIT:
